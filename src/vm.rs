@@ -77,13 +77,7 @@ impl Vm {
         while self.ip < self.code.len() as u64 {
             let opcode = self.consume_opcode();
             match opcode {
-                Opcode::Goto => self.goto(),
-                Opcode::UIntImm => self.imm(),
-                Opcode::IntImm => self.imm(),
-                Opcode::FloatImm => self.imm(),
-                Opcode::True => self.push(1),
-                Opcode::False => self.push(0),
-                _ => unimplemented!(),
+                _ => todo!(),
             }
         }
     }
